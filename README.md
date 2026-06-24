@@ -46,7 +46,22 @@ sudo penguins-powerwash menu
 ## CI
 
 <!-- AI:start:ci -->
-_CI documentation pending._
+The repository uses GitHub Actions for continuous integration. The workflows are:
+
+1. **`mirror-osp-to-ooc.yaml`**  
+   Mirrors changes from the upstream repository (`Interested-Deving-1896`) to this fork.  
+   - **Triggers**: On push to the `main` branch of the upstream repository.  
+   - **Required Secrets**: `UPSTREAM_REPO`, `GITHUB_TOKEN`.
+
+2. **`rebase-prs.yml`**  
+   Automatically rebases pull requests to keep them up-to-date with the base branch.  
+   - **Triggers**: On pull request updates.  
+   - **Required Secrets**: None.
+
+3. **`trigger-artifact-mirror.yml`**  
+   Builds and uploads release artifacts to a specified external storage.  
+   - **Triggers**: On release creation.  
+   - **Required Secrets**: `STORAGE_ACCESS_KEY`, `STORAGE_SECRET_KEY`, `STORAGE_BUCKET_NAME`.
 <!-- AI:end:ci -->
 
 ## Mirror chain
