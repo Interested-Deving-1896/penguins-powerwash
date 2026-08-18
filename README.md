@@ -90,7 +90,7 @@ Note: This repository is a mirror. Please refer to the upstream source for addit
 ## Origins
 
 <!-- AI:start:origins -->
-_Original project — no upstream fork._
+_Original project — no upstream influences recorded._
 <!-- AI:end:origins -->
 
 ## Resources
